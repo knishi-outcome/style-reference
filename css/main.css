@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'astonished';
+	src: url(../font/ASTONISHED.TTF);
+}
+@font-face {
+    font-family: 'misproject';
+    src: url(../font/MISPROJECT.TTF);
+}
+
+body{
+font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+margin:0;
+color:#313131;
+}
+
+img{
+outline:none;
+border-style:none;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.video {
+	width: 100%;
+	transition: .5s;
+	z-index: 5;
+}
+.vid-wrap {
+	height: 500px;
+	background-color: hsl(0,0%,10%);
+	transition: .5s;
+    padding: auto;
+    text-align: center;
+}
+.vid-wrap > iframe {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	max-width: 854px;
+}
+.aside {
+	/* position: fixed; */
+	width: 40%;
+    float: left;
+}
+.aside .vid-wrap {
+	height: 240px;
+}
+.aside h1 {
+	opacity: 0;
+}
+.post{
+
+}
+.aside-post{
+    float: right;
+    width: 45%;
+}
+a{
+    color:blue;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:visited{
+    color:blue;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:hover {
+    color: #F5A862;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/*****HEADER*****/
+header{
+    display: block;
+    width:100%;
+    overflow: hidden;
+}
+header h1{
+    font-size:120%;
+    color:#313131;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px solid #313131;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight:700;
+    float: left;
+}
+
+@-webkit-keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+@keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+.change-bgcolor{
+    background-color: #e74c3c;
+    animation: bg-color 10s infinite;
+    -webkit-animation: bg-color 10s infinite;
+}
+
+.top-banner h2{
+    font-size: 100px;
+    background: -webkit-linear-gradient(#00d0ff, #25ffbf);
+    /* -webkit-text-fill-color: transparent; */
+    color: white;
+    margin-left: 20%;
+    font-weight: 200;
+}
+
+.font-astonished{
+    font-family: astonished;
+}
+.dummy-height{
+    height: 300px;
+}
+.font-misproject{
+    font-family: misproject;
+}
+
+button#popup1 {
+    min-width: 135px;
+    max-width: 200px;
+    min-height: 50px;
+    border: 0;
+    outline: 0;
+
+    color: white;
+
+    /* pink to orange */
+    background: #ee0979;
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+
+    vertical-align: top;
+    cursor: pointer;
+}
+.button-area{
+    text-align: center;
+}
+
+header .top-banner{
+    width: 100%;
+}
+
+header p{
+    font-size:100%;
+    color:#313131;
+    float: left;
+}
+
+/*****BRANDING*****/
+#branding{
+    display: block;
+    width: 60%;
+    margin-left: 20%;
+    overflow: hidden;
+    background-color: #313131;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    line-height: 300px;
+}
+#branding p{
+    color: #fff;
+    font-size: 120%;
+    padding-left: 3%;
+}
+
+/*****NAV*****/
+nav{
+    width: 100%;
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+nav ul{
+    width: 60%;
+    margin-left: 20%;
+}
+nav li{
+    width: calc(25% - 2px);
+    font-size: 110%;
+    letter-spacing: 5px;
+    font-weight: 400;
+    line-height: 45px;
+    border-left: 1px solid orange;
+    color: #313131;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+}
+nav li:last-child{
+    border-right: 1px solid orange;
+}
+
+nav li:hover{
+    background-color: orange;
+    transition: background-color 0.5s ease-out;
+    color: #fff;
+}
+
+/*****ARTICLE*****/
+section{
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+article{
+    max-width: 100%;
+    padding: 2.5%;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+article:nth-child(2n){
+    margin-left: 30px;
+}
+article .date{
+    font-size: 60%;
+    color: orange;
+    border: 1px solid orange;
+    padding-top:3px;
+    padding-bottom: 3px;
+    padding-right: 6px;
+    padding-left: 6px;
+    letter-spacing: 5px;
+    float: left;
+}
+article h1{
+    width: 100%;
+    font-size: 150%;
+    color: #313131;
+    letter-spacing: 3px;
+    padding-bottom:2px;
+    padding-top: 10px;
+    border-bottom: 1px solid #bababa;
+    margin-bottom: 15px;
+    float: left;
+}
+
+article h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px;
+}
+.align-left{
+    text-align: left;
+}
+article h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+article p{
+    font-size: 100%;
+    color: #313131;
+    letter-spacing: 3px;
+    line-height: 200%;
+    margin-bottom: 10px;
+    float: left;
+}
+article .btn{
+    color: #fff;
+    border: 1px solid orange;
+    background-color: orange;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    overflow: hidden;
+    float: right;
+}
+article .btn:hover{
+    background-color: #fff;
+    border: 1px solid orange;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    color: orange;
+    overflow: hidden;
+}
+section {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+}
+section:nth-child(even) {
+  background: #f2f2f2;
+}
+
+footer{
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #313131;
+}
+footer address{
+    color: #fff;
+    letter-spacing: 5px;
+}
